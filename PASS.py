@@ -1,14 +1,15 @@
-import random
+import secrets
 
 
 def password_generator():
     # Password generator. After a brief introduction and if "PIN" or "pin" has not been typed
     # in the main function this code will be displayed.
-    # a number of passwords to be given and the length of those passwords will be asked,
-    # Then a random password will be generated.
+    # A number of passwords to be given and the length of those passwords will be asked,
+    # Then a random password will be generated with the secrets() class.
     # If the advanced version is executed the user will be able to customize the password.
     # Otherwise only the length and the number of password will be selected.
     try:
+        secret_pass = secrets.SystemRandom()
         print("")
         print("Welcome to the password generator! You can either take the basic plan to get passwords containing\n"
               "lower-case, upper-case, special characters and numbers or get the advanced plan where you can\n"
@@ -29,7 +30,7 @@ def password_generator():
             for numpass in range(num_pass):
                 passw = ''
                 for lenpass in range(len_pass):
-                    passw = passw + random.choice(possible_chars)
+                    passw = passw + secret_pass.choice(possible_chars)
                 print(passw)
 
             print("")
@@ -74,7 +75,7 @@ def password_generator():
             for numpass in range(num_pass):
                 passw = ''
                 for lenpass in range(len_pass):
-                    passw = passw + random.choice(chars)
+                    passw = passw + secret_pass.choice(chars)
                 print(passw)
 
             print("")
