@@ -2,6 +2,12 @@ import random
 
 
 def password_generator():
+    # Password generator. After a brief introduction and if "PIN" or "pin" has not been typed
+    # in the main function this code will be displayed.
+    # a number of passwords to be given and the length of those passwords will be asked,
+    # Then a random password will be generated.
+    # If the advanced version is executed the user will be able to customize the password.
+    # Otherwise only the length and the number of password will be selected.
     try:
         print("")
         print("Welcome to the password generator! You can either take the basic plan to get passwords containing\n"

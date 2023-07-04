@@ -2,6 +2,12 @@ import random
 
 
 def pin_generator():
+    # PIN generator. After a brief introduction and if "PIN" or "pin" has been typed
+    # in the main function, every time "PIN" or "pin" is typed in console
+    # a number of PINS to be given will be asked.
+    # Then a random number will be generated.
+    # NOTE: It would be easier to generate a number between 1000 and 9999, but I wanted
+    # to practice with the random/secret function, max efficiency is not the focus of this code.
     rolling = True
     while rolling:
         pin = input("Welcome to the PIN generator! Generate a new PIN typing 'PIN' in"
